@@ -1,0 +1,239 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green: #93cb52;
+  --light: #fefefe;
+  --dark: #333;
+  --p1: 1rem;
+  --p2: 2rem;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4rem;
+  word-spacing: .1rem;
+  letter-spacing: .75px;
+}
+
+.tc-light{ color: var(--light); }
+
+span{ color: var(--green); }
+
+#read-more, #contact{ background: var(--green); }
+
+.bg-dark { background: var(--dark); }
+
+h2 { font-size: var(--p2); }
+
+li { list-style: none; }
+
+a{
+  text-decoration: none;
+  color: var(--light);
+}
+
+a:hover {
+  background-color: var(--green);
+}
+
+
+
+/*          Navbar           */
+
+#navbar {
+  display: flex;
+  /* display: none; */
+  justify-content: space-between;
+  padding: .9rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+#navbar #tab {
+  display: flex;
+  justify-content: space-around;
+}
+
+#navbar #tab li a{ padding: var(--p1); }
+
+#navbar #logo a:hover{ background: none; }
+
+
+
+/*          Header           */
+
+#home {
+  height: 100vh;
+  display: flex;
+  /* display: none; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("./image_resources/showcase.jpg") no-repeat center center/cover;
+}
+
+#home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.15);
+}
+
+#home h2 {
+  font-size: 3.75rem;
+  padding: var(--p1);
+  margin: var(--p1);
+}
+
+#home p {
+  font-size: 1.3rem;
+  padding: var(--p1);
+}
+
+#home #read-more {
+  padding: .25rem .5rem;
+  border-radius: .3rem;
+}
+
+
+
+/* What We Do */
+
+#what-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 3rem;
+  margin-bottom: var(--p);
+}
+
+#what-container #heading{ padding-bottom: 4rem; }
+
+#what-container #what {
+  display: flex;
+  width: 75%;
+  margin: 0 auto;
+}
+
+#what-container #what .work {
+  display: flex;
+  font-size: 110%;
+}
+
+#what-container #what .work i{
+  align-self: center;
+  padding: .75rem;
+  border-radius: 50%;
+  margin: 0 1.5rem;
+  background: var(--green);
+}
+
+#what-container #what .work .box { text-align: left; }
+
+#what-container #what .work .box h3 { margin-bottom: .5rem; }
+
+
+
+/*                            Who We Are                           */
+
+#who { display: flex; }
+
+#who div { flex: 1; }
+
+#who #team-image { background: url("./image_resources/people.jpg") no-repeat center center/cover; }
+
+#who #team { margin: 1rem var(--p2); }
+
+#who #team h2,
+#who #team h3 { padding: var(--p1) 0; }
+
+#who #team ul li {
+  padding: .5rem 0;
+  border-bottom: 1px dotted #444;
+}
+
+
+
+/*          Clients          */
+
+#clients {
+  width: 100%;
+  padding: var(--p2);
+} 
+
+#clients h2{
+  text-align: center;
+  margin-bottom: var(--p1);
+}
+
+#clients #items {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--p1);
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#clients #items div img{ width: 60%; }
+
+
+
+/*        Contact Form           */
+
+#contact { display: flex; }
+
+#contact div{ flex: 1; }
+
+#contact #data { padding: var(--p2); }
+
+#contact #data form { padding: .75rem; }
+
+#contact #data h2 { padding-bottom: 1rem; }
+
+#contact #data form .input,
+#contact #data form .textarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#contact #data form .input label,
+#contact #data form .textarea label{
+  font-size: 110%;
+  padding: .5rem 0;
+}
+
+#contact #data form .input input,
+#contact #data form .textarea textarea{
+  padding: .35rem;
+  border: none;
+  border-radius: .3rem;
+}
+
+#contact #data #btn {
+  width: 100%;
+  padding: .5rem;
+  border: none;
+  border-radius: .4rem;
+}
+
+#contact #pic { background: url(./image_resources/people.jpg) no-repeat center center/cover; }
+
+
+
+/*          Footer           */
+
+footer {
+  padding: var(--p2);
+  text-align: center;
+}
