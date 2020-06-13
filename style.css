@@ -190,7 +190,10 @@ a:hover { background-color: var(--green); }
 
 #contact { display: flex; }
 
-#contact div{ flex: 1; }
+#contact div{
+  flex: 1;
+  width: 90%;
+}
 
 #contact #data { padding: var(--p2); }
 
