@@ -16,7 +16,6 @@ body{
   font-family: 'Roboto', sans-serif;
   line-height: 1.4rem;
   word-spacing: .1rem;
-  letter-spacing: .75px;
 }
 
 .tc-light{ color: var(--light); }
@@ -36,9 +35,7 @@ a{
   color: var(--light);
 }
 
-a:hover {
-  background-color: var(--green);
-}
+a:hover { background-color: var(--green); }
 
 
 
@@ -46,46 +43,46 @@ a:hover {
 
 #navbar {
   display: flex;
-  /* display: none; */
   justify-content: space-between;
   padding: .9rem;
   position: fixed;
   z-index: 1;
+  overflow: hidden;
   width: 100%;
 }
 
-#navbar #tab {
-  display: flex;
-  justify-content: space-around;
-}
+#navbar #logo a:hover{ background: none; }
+
+#navbar #tab { display: flex; }
 
 #navbar #tab li a{ padding: var(--p1); }
-
-#navbar #logo a:hover{ background: none; }
 
 
 
 /*          Header           */
 
 #home {
-  height: 100vh;
+  height: 100vh;  
+  background: url("./image_resources/showcase.jpg") no-repeat center center/cover;
+}
+
+#home div {
+  height: 100%;
   display: flex;
-  /* display: none; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url("./image_resources/showcase.jpg") no-repeat center center/cover;
 }
 
-#home::before {
+#home div::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.15);
+  background: rgba(0,0,0,0.2);
 }
 
 #home h2 {
@@ -100,44 +97,45 @@ a:hover {
 }
 
 #home #read-more {
-  padding: .25rem .5rem;
+  padding: .5rem;
   border-radius: .3rem;
+  margin-top: var(--p1);
 }
 
 
 
-/* What We Do */
+/*           What We Do             */
 
 #what-container {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 3rem;
-  margin-bottom: var(--p);
+  padding: 0 3rem;
+  margin-bottom: var(--p2);
 }
 
-#what-container #heading{ padding-bottom: 4rem; }
+#what-container #heading{ padding: var(--p2) 0; }
 
 #what-container #what {
   display: flex;
-  width: 75%;
+  width: 70%;
   margin: 0 auto;
 }
 
-#what-container #what .work {
-  display: flex;
-  font-size: 110%;
-}
+#what-container #what .work { display: flex; }
 
 #what-container #what .work i{
   align-self: center;
   padding: .75rem;
   border-radius: 50%;
-  margin: 0 1.5rem;
   background: var(--green);
 }
 
-#what-container #what .work .box { text-align: left; }
+#what-container #what .work .box {
+  text-align: left;
+  padding: var(--p2);
+  padding-left: var(--p1);
+}
 
 #what-container #what .work .box h3 { margin-bottom: .5rem; }
 
@@ -184,7 +182,7 @@ a:hover {
   text-align: center;
 }
 
-#clients #items div img{ width: 60%; }
+#clients #items li img{ width: 60%; }
 
 
 
@@ -192,7 +190,10 @@ a:hover {
 
 #contact { display: flex; }
 
-#contact div{ flex: 1; }
+#contact div{
+  flex: 1;
+  width: 90%;
+}
 
 #contact #data { padding: var(--p2); }
 
@@ -202,6 +203,7 @@ a:hover {
 
 #contact #data form .input,
 #contact #data form .textarea {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -236,4 +238,43 @@ a:hover {
 footer {
   padding: var(--p2);
   text-align: center;
+}
+
+@media(max-width: 668px) {
+
+  #navbar {
+    display: block;
+    line-height: 2;
+    text-align: center;
+  }
+
+  #navbar #tab { justify-content: space-evenly;}
+
+  #home h2 { line-height: 1.2; }
+
+  #what-container { padding: 0; }
+
+  #what-container #what {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #what-container #what .work .box {
+    padding: var(--p1) 3rem;
+  }
+
+  #who #team-image,
+  #clients #items li:last-child,
+  #contact #pic {
+    display: none;
+  }
+
+  #clients #items { width: 100%; }
+
+  #clients #items li img {
+    width: 100%;
+    padding: var(--p1);
+  }
+
 }
