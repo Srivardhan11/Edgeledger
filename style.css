@@ -63,7 +63,7 @@ a:hover { background-color: var(--green); }
 
 #home {
   height: 100vh;  
-  background: url("./image_resources/showcase.jpg") no-repeat center center/cover;
+  background: rgba(0,0,0,.4);
 }
 
 #home div {
@@ -80,9 +80,10 @@ a:hover { background-color: var(--green); }
   position: absolute;
   top: 0;
   left: 0;
+  background: url("./image_resources/showcase.jpg") no-repeat center center/cover;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.2);
+  z-index: -1;
 }
 
 #home h2 {
