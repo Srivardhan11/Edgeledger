@@ -51,7 +51,7 @@ a:hover { background-color: var(--green); }
   width: 100%;
 }
 
-#navbar #logo a:hover{ background: none; }
+#navbar #logo a:hover{ background: none; }#navbr #logo a:hover{ background: none;}
 
 #navbar #tab { display: flex; }
 
